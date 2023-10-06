@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script>
+      //Creates a new object with the specified prototype object and properties
+      var obj1 = { x: 10, y: 20 }; 
+      var obj2 = Object.create(obj1);
+      // obj2 is a new object and obj2's prototype is obj1
+      console.log(obj1, obj2);
+      console.log("object2: " + obj2.x + " " + obj2.y);
+
+      
+    </script>
+    <!-- obj1 changes affects obj2 but obj2 changes doesnt affect obj1-->
+  </body>
+</html>

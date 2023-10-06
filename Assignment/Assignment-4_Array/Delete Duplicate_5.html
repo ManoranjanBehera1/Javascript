@@ -1,0 +1,29 @@
+<script>
+  // 5. write a program to delete the duplicate elements from an array.
+
+  var arr1 = [2, 9, 12, 4, 4, 12, 8, 16, 7, 3, 16];
+  newArr = arr1.filter((item, pos) => {
+    return arr1.indexOf(item) == pos;
+  });
+  console.log(newArr);
+
+
+
+  /* const array = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+
+  function removeDuplicates(arr) {
+    const uniqueArray = [];
+
+    for (let i = 0; i < arr.length; i++) {
+      if (uniqueArray.indexOf(arr[i]) === -1) {
+        uniqueArray.push(arr[i]);
+      }
+    }
+
+    return uniqueArray;
+  }
+
+  const newArray = removeDuplicates(array);
+
+  console.log(newArray); // Output: [1, 2, 3, 4, 5] */
+</script>

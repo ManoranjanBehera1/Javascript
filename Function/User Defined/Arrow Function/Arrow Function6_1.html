@@ -1,0 +1,31 @@
+<html>
+
+<body>
+  <script>
+    class Employee {
+      name = "Manoranjan";
+      sal = 5000;
+      displayInfo1 = function () {
+        console.log("displayInfo-1 " + this); // this = Employee / Window
+      };
+      displayInfo2 = () => {
+        console.log("displayInfo-2" + this.name, this.sal); // this = Employee
+      };
+    }
+    let emp = new Employee();
+    // emp.displayInfo1();
+    // emp.displayInfo2();
+
+    let b = emp.displayInfo2;
+    b();
+
+    let a = emp.displayInfo1;
+    a();
+    let c = a;
+    c();
+    let d=c;
+    d();
+  </script>
+</body>
+
+</html>

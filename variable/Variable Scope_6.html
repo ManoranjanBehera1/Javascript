@@ -1,0 +1,14 @@
+<script>
+    let a = 10; // global
+
+    function f1() {
+      let a = 20; // function
+      if (true) {
+        let a = 30; // block
+        console.log("inside block", a); //30
+      }
+      console.log("inside function", a); //20
+    }
+    f1();
+    console.log("global", a); //10
+  </script>

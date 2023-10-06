@@ -1,0 +1,54 @@
+<script>
+    let cars = ["tata", "honda", "maruti", "hundai", "toyota"];
+  
+    // For Loop  ..............................................
+    for (let i = 0; i < cars.length; i++) {
+      // console.log(cars[i])
+      document.write(cars[i] + '<br>');
+    }
+    document.write('<hr>');  
+
+     // For Loop
+     for (let i = 0; i < cars.length; i+=2) {
+      // console.log(cars[i])
+      document.write(cars[i] + '<br>');
+    }
+    document.write('<hr>');  //................................
+
+    // For-in   .............................................
+    for (let i in cars) {
+      document.write(cars[i] + '<br>');
+      // console.log(cars[i], i)
+    }
+    document.write('<hr>');  
+
+     // For-in   
+     for (i in cars) {
+      if (i%2==0)
+      document.write(cars[i] + '<br>');
+      // console.log(cars[i], i)
+    }
+    document.write('<hr>'); //................................
+
+    // for-of
+    for (let car of cars) {
+      document.write(cars + '<br>');
+      // console.log(car)
+    }
+    document.write('<hr>');  //................................
+  
+    //forEach (callBack(val,ind,arr)) ........................
+    cars.forEach((ele, ind) => document.write(ele, ind, '<br>'));
+  
+    // function f1(a,b,c,d){ //a=val,b=ind,c=arr,d=undefined
+    //   console.log(a,b,c,d)
+    // }
+
+    //forEach
+    cars.forEach(f1);
+
+    function f1 (val, ind, arr,){
+      document.writeln(val + ind + arr + '<br>');
+    }
+    //.......................................................
+  </script>

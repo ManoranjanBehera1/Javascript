@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <script>
+      // search() can take REGEX as parameter
+      // indexOf() cann't
+      let str = "This is 15th session of javascript";
+      let searchMy = str.search(/[\d]/g);    // d- digit
+      console.log(searchMy);  //8
+
+      let searchInd2 = str.indexOf(/[\d]/g);
+      console.log(searchInd2);  //-1
+
+      let searchInd3 = str.indexOf("15");
+      console.log(searchInd3);  //8
+    </script>
+  </body>
+</html>

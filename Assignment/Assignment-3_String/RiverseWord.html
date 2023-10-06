@@ -1,0 +1,9 @@
+<!-- 2. WAP to reverse words
+	input:- 'This is javascript class'
+	output:- 'class javascript is this' -->
+<script>
+    var str = 'This is javascript class';
+
+    var rev = str.split("").reverse().join("").split(" ").reverse().join(" ");
+    document.write(rev);
+</script>

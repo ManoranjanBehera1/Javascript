@@ -1,0 +1,29 @@
+<script>
+    let account = { accNo: 12345, accBal: 500 }; // object - NotEncapsulated
+    console.log(account);
+    account.accBal = -50000;
+    console.log(account);
+  
+    function openAccount() {
+      let accNo = 11111;
+      let accBal = 5000;
+  
+      return {
+        disp: function () {
+          console.log(accNo, accBal)
+        },
+        deposit: function (amt) {
+          if (amt > 0)
+            accBal = accBal + amt;
+          else
+            alert('boss, you keep ur amout with you')
+        }
+      }
+    }
+    let encapsulatedAccount = openAccount();
+    console.log(encapsulatedAccount);
+    encapsulatedAccount.disp();
+    encapsulatedAccount.deposit(-2000);
+    encapsulatedAccount.deposit(3000);
+    encapsulatedAccount.disp();
+  </script>

@@ -1,0 +1,16 @@
+<!-- 6. WAP to print Account number
+   input:- '12345678987'
+   output:- '12*******87' -->
+   <script>
+    let input = '12345678987';
+    let res = '';
+    
+    for (i in input){
+        if (i<2 || i >= input.length-2){
+            res = res+input[i];
+        }else{
+            res = res+ '*'
+        }
+    }
+    console.log(res)
+   </script>
