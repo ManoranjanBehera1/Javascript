@@ -1,0 +1,32 @@
+<script>
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    
+    const num = Array(number + 1).fill(true);
+    num[0] = false;
+    num[1] = false;
+
+    for (let i = 2; i * i <= number; i++) {
+        if (num[i]) {
+            for (let j = i * i; j <= number; j += i) {
+                num[j] = false;
+            }
+        }
+    }
+
+    return num[number];
+}
+
+// Get user input
+let num1 = prompt("Enter a number: ");
+num1 = parseInt(num1);
+
+if (isPrime(num1)) {
+    console.log(`${num1} is a prime number.`);
+} else {
+    console.log(`${num1} is not a prime number.`);
+}
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+/* The ?. operator returns undefined if an object is undefined or null 
+(instead of throwing an error). */
+
+    let obj = {
+      property1: {
+        property2: {
+          property3: "Hello, World!"
+        }
+      }
+    };
+    
+    // Without optional chaining (pre-ES11)
+    let value = obj && obj.property1 && obj.property1.property2 && obj.property1.property2.property3;
+    console.log(value); // Output: "Hello, World!"
+    
+    // With optional chaining (ES11 and later)
+    let valueWithOptionalChaining = obj?.property1?.property2?.property3;
+    console.log(valueWithOptionalChaining); // Output: "Hello, World!"
+    
+    
+</script>
+    

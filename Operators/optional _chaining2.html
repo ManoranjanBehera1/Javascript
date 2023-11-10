@@ -1,0 +1,22 @@
+<script>
+/* The ?. operator returns undefined if an object is undefined or null 
+(instead of throwing an error). */
+
+const person = {
+  name: 'John',
+  address: {
+    city: 'New York',
+    zipcode: 10001,
+  },
+};
+
+// Accessing nested properties without optional chaining
+const city = person.address.city; // This could cause an error if address is null or undefined
+
+// Accessing nested properties with optional chaining
+const city1 = person.address?.city; // Safely accesses city even if address is null or undefined
+
+    
+    
+</script>
+    

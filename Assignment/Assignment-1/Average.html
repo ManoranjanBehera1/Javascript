@@ -1,10 +1,11 @@
 <script>
     var math = +prompt("Enter Math Marks");
-    var eng = prompt("Enter English Marks");
-    var comp = prompt("Enter Computer Marks");
-    var full = prompt("Enter Full Marks")
+    var eng  = +prompt("Enter English Marks");
+    var comp = +prompt("Enter Computer Marks");
+    var full = +prompt("Enter Full Marks")
 
-    var res = (((math) + parseInt(eng) + parseInt(comp)) / parseInt(full)) * 100;
+    // var res = (((math) + parseInt(eng) + parseInt(comp)) / parseInt(full)) * 100;
+    var res = ((math + eng + comp) / full) * 100;
 
     if (res >= "60") {
         document.write("Average Mark is -- " + res + " (First)")
