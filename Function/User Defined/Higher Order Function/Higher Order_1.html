@@ -1,16 +1,20 @@
 <script>
   // doHomework  is a function, takes 2 more functions as argument
-  function doHomework(subject, alertStarted, alertFinished) {
+  function doHomework(subject, alertStarted, alertFinished, alertdone) {
     alertStarted(); //callback
     console.log("I am doing homework");
     alertFinished(); //callback
+    alertdone();
   }
-  doHomework("Javascript", f1, f2); // F1 , f2 are callBacks
+  doHomework("Javascript", f1, f2, f3); // F1 , f2 are callBacks
 
   function f1() {
     console.log("started the homework");
   }
   function f2() {
     console.log("finished the homework");
+  }
+  function f3(){
+    console.log("homework done");
   }
 </script>

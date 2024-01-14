@@ -1,16 +1,24 @@
 <script>
     // memoization of febonacci series..
     var counter = 0;
+
+    // Recursive function to calculate Fibonacci numbers
     function fibonacci(n) {
       console.log("called ", ++counter);
+
+      // Base case: if n is 0 or 1, return n
       if (n <= 1) {
         return n;
       }
+      // Recursive calls to calculate Fibonacci numbers
       return fibonacci(n - 1) + fibonacci(n - 2);
     }
+    // Measure the time it takes to execute the Fibonacci function for n=10
     console.time();
     let res = fibonacci(10);
     console.timeEnd();
+
+    // Print the result of the Fibonacci calculation
     console.log("result is ", res);
 
       // recursive way to find fibonacci

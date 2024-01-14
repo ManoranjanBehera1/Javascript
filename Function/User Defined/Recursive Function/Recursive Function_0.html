@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <script>
+      function countDown(fromNumber) {
+        console.log(fromNumber); //10
+        let nextNumber = fromNumber - 1; // 10-1=9
+        if (nextNumber > 0) {
+          countDown(nextNumber);
+        }
+      }
+      countDown(10);
+    </script>
+  </body>
+</html>
